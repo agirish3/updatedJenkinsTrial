@@ -8,7 +8,8 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "test": "ng test"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -39,6 +40,22 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.11",
+    "@types/jasmine": "^3.3.8",
+    "@types/node": "^11.9.3",
+    "angular-cli": "^1.0.0-beta.28.3",
+    "codecov": "^3.2.0",
+    "jasmine-core": "^3.3.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "^4.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-remap-istanbul": "^0.6.0",
+    "phantomjs-prebuilt": "^2.1.16",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-eslint-rules": "^5.4.0",
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project",
