@@ -14,12 +14,12 @@ pipeline {
          }
        }
 
-       stage('IOS Build') {
-          steps {
-             sh 'ionic cordova build ios --release'
+      //  stage('IOS Build') {
+      //     steps {
+      //        sh 'ionic cordova build ios --release'
              
-          }
-       }
+      //     }
+      //  }
 
        stage('Android Build') {
           steps {
@@ -43,18 +43,18 @@ pipeline {
           }
        }
 
-         stage('Publish Firebase Web') {
-          steps {
-              //sh 'firebase deploy --token "YourTokenKey"'
-              echo 'Firebase Deploy'
-          }
-       }
+      //    stage('Publish Firebase Web') {
+      //     steps {
+      //         //sh 'firebase deploy --token "YourTokenKey"'
+      //         echo 'Firebase Deploy'
+      //     }
+      //  }
 
-        stage('Publish iOS') {
-          steps {   
-              echo "Publish iOS"
-          }
-       }
+      //   stage('Publish iOS') {
+      //     steps {   
+      //         echo "Publish iOS"
+      //     }
+      //  }
 
         stage('Publish Android') {
           steps {
