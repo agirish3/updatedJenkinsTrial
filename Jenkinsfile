@@ -21,11 +21,11 @@ pipeline {
       //     }
       //  }
 
-      stage('Unit Tests') {
-          steps {
-             sh 'npm test'
-         }
-       }
+    //   stage('Unit Tests') {
+    //       steps {
+    //          sh 'npm test'
+    //      }
+    //    }
 
        stage('Android Build') {
           steps {
