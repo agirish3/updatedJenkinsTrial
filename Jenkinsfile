@@ -22,14 +22,13 @@ pipeline {
       //  }
 
         stage('SonarQube analysis') {
-                steps {
-                    echo "SonarQube"
-                    var scannerHome = tool 'SonarQube Scanner 2.8';
-                    echo scannerHome;
-                    // withSonarQubeEnv('My SonarQube Scanner') {
-                    //     sh "${scannerHome}/bin/sonar-scanner"
-                    // }
+            steps {
+                echo "SonarQube"
+                var scannerHome = tool 'SonarQube Scanner 2.8.1';
+                withSonarQubeEnv('My SonarQube Scanner') {
+                    sh "${scannerHome}/bin/sonar-scanner"
                 }
+            }
         }
 
       stage('Unit Tests') {
