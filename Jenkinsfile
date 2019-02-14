@@ -24,7 +24,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 echo "SonarQube"
-                var scannerHome = tool 'SonarQube Scanner 2.8.1';
+                var scannerHome = tool 'SonarQube Scanner 2.8';
                 withSonarQubeEnv('My SonarQube Scanner') {
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
