@@ -22,16 +22,14 @@ pipeline {
       //  }
 
         stage('SonarQube analysis') {
-            script{
                 steps {
                     echo "SonarQube"
-                    def scannerHome = tool 'SonarQube Scanner 2.8';
+                    var scannerHome = tool 'SonarQube Scanner 2.8';
                     echo scannerHome;
                     // withSonarQubeEnv('My SonarQube Scanner') {
                     //     sh "${scannerHome}/bin/sonar-scanner"
                     // }
                 }
-            }
         }
 
       stage('Unit Tests') {
