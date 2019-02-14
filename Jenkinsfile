@@ -27,7 +27,10 @@ pipeline {
             // withSonarQubeEnv('My SonarQube Server') {
             // sh "${scannerHome}/bin/sonar-scanner"
             // }
-            echo "SonarQube"
+            steps {
+             echo "SonarQube"
+            }
+            
         }
 
       stage('Unit Tests') {
