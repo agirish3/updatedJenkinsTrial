@@ -21,6 +21,14 @@ pipeline {
       //     }
       //  }
 
+        stage('SonarQube analysis') {
+            // requires SonarQube Scanner 2.8+
+            def scannerHome = tool 'SonarQube Scanner 2.8.1';
+            withSonarQubeEnv('My SonarQube Server') {
+            sh "${scannerHome}/bin/sonar-scanner"
+            }
+        }
+
       stage('Unit Tests') {
           steps {
              sh 'npm test'
